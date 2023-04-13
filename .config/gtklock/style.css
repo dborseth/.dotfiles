@@ -1,0 +1,9 @@
+window {
+  background-color: black;
+}
+
+#window-box {}
+#clock-label {}
+#body {}
+#error-label {}
+#input-label {}

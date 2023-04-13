@@ -1,0 +1,72 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Caskaydia Cove Nerd Font;
+  font-size: 14px;
+}
+
+window#waybar {
+  background: #161c23;
+  color: #b0b0bf;
+}
+
+tooltip {
+  background: #161c23;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #313f4e;
+}
+
+.modules-left {
+  margin-left: 16px;
+}
+
+.modules-right {
+  margin-right: 16px;
+}
+
+#battery, #wireplumber, #network, #bluetooth {
+  margin-left: 8px;
+  margin-right: 8px; 
+}
+
+#window {
+  color: #b0b0bf;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+#battery.charging {
+  color: #92bfb1;
+}
+
+#battery.warning:not(.charging) {
+  color: #f4ac45;
+}
+
+#battery.critical {
+  color: #a61c3c;
+}
+
+#network.disabled {
+  color: #a61c3c;
+}
+
+#network.disconnected {
+  color: #a61c3c;
+}
+
+#wireplumber.muted {
+  color: #a61c3c;
+}
+
+#bluetooth.off {
+  color: #a61c3c;  
+}
+
+#bluetooth.disabled {
+  color: #a61c3c;
+}

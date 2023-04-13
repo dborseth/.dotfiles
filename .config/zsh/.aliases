@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+#https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html
+alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias ls='exa -lax --group-directories-first'
+# alias ls='ls -la --color=auto'
+
+alias ..='cd ..'
+alias ...='cd ...'
+
+alias -g G='| grep'
+alias -g L='| less'
+alias -g H='| head'
+alias -g T='| tail'
+
+alias g='git'
+alias ga='git add'
+alias gs='git status'
