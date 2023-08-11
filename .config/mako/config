@@ -1,0 +1,22 @@
+font=Caskaydia Cove nerd Font 12
+background-color=#161c23
+text-color=#b0b0bf
+width=300
+height=100
+padding=8
+border-size=1
+border-color=#313f4e
+border-radius=4
+icons=0
+default-timeout=3000
+ignore-timeout=1
+anchor=top-right
+
+[urgency=low]
+border-color=#313f4e
+
+[urgency=normal]
+border-color=#313f4e
+
+[urgency=high]
+border-color=#f4ac45

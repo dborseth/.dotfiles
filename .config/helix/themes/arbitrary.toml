@@ -1,0 +1,129 @@
+"attribute" = "white"
+"type" = { fg = "white" }
+"type.builtin" = "lgreen"
+"constructor" = "orange"
+"constant.builtin" = { fg = "red" }
+"constant.character" = { fg = "blue", modifiers = ["bold"] }
+"constant.numeric" = { fg = "red" }
+"string" = "yellow"
+"comment" = { fg = "lyellow" }
+"variable" = "blue"
+"variable.builtin" = { fg = "lgreen" }
+"label" = "blue"
+"punctuation" = "white"
+"punctuation.special" = "orange"
+"keyword" = { fg = "lmagenta" }
+"operator" = "white"
+"function" = { fg = "white" }
+"tag" = "blue"
+"namespace" = { fg = "white", modifiers = ["dim"] }
+"special" = "orange"
+
+"markup.heading" = "blue"
+"markup.list" = "red"
+"markup.bold" = { fg = "lyellow", modifiers = ["bold"] }
+"markup.italic" = { fg = "magenta", modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "lyellow", modifiers = ["underlined"] }
+"markup.link.text" = "red"
+"markup.quote" = "teal"
+"markup.raw" = "lgreen"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "lyellow"
+
+"ui.background" = "base0"
+"ui.background.seperator" = "magenta"
+
+"ui.cursor" = { fg = "base0", bg = "white" }
+"ui.cursor.normal" = { fg = "white", bg = "base5" }
+"ui.cursor.insert" = { fg = "white", bg = "base5" }
+"ui.cursor.select" = { fg = "white", bg = "base5" }
+"ui.cursor.match" = { fg = "base0", bg = "white" }
+
+"ui.debug.breakpoint" = "lmagenta"
+"ui.debug.active" = "magenta"
+"ui.gutter" = { bg = "base0" }
+"ui.gutter.selected" = { bg = "base0" }
+"ui.highlight.frameline" = { modifiers = ["italic"] }
+"ui.linenr" = "base5"
+"ui.linenr.selected" = { fg = "white", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "fg0", bg = "base2" }
+"ui.statusline.inactive" = { fg = "fg0", bg = "base2" }
+"ui.statusline.normal" = { bg = "green", modifiers = ["bold"] }
+"ui.statusline.insert" = { bg = "red", modifiers = ["bold"] }
+"ui.statusline.select" = { bg = "yellow", modifiers = ["bold"] }
+"ui.statusline.separator" = "fg0"
+
+"ui.popup" = { bg = "base1" }
+"ui.popup.info" = { bg = "base1" }
+"ui.window" = { bg = "fg0" }
+"ui.help" = { fg = "fg0", bg = "base1" }
+"ui.text" = "fg0"
+
+"ui.virtual.ruler" = { bg = "red" }
+"ui.virtual.whitespace" = "base3"
+"ui.virtual.indent-guide" = "base3"
+"ui.virtual.inlay-hint" = "base3"
+"ui.virtual.inlay-hint.parameter" = "base3"
+"ui.virtual.inlay-hint.type" = "base3"
+"ui.virtual.wrap" = "base3"
+
+"ui.menu" = { fg = "fg0", bg = "base1" }
+"ui.menu.selected" = { fg = "lmagenta", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "base5", bg = "base1" }
+
+"ui.selection" = { fg = "fg0", bg = "base5" }
+"ui.selection.primary" = { fg = "fg0", bg = "base5" }
+
+"ui.cursorline" = "fg0"
+"ui.cursorline.primary" = "fg0"
+"ui.cursorline.secondary" = "fg0"
+"ui.cursorcolumn.primary" = "fg0"
+"ui.cursorcolumn.secondary" = "fg0"
+
+warning = "yellow"
+error = "red"
+hint = "teal"
+info = "blue"
+
+"diagnostic.hint" = { underline = { color = "teal", style = "dotted"} }
+"diagnostic.info" = { underline = { color = "blue", style = "dotted"} }
+"diagnostic.warning" = { underline = { color = "yellow", style = "dotted"} }
+"diagnostic.error" = { underline = { color = "red", style = "dotted"} }
+
+[palette]
+base0 = "#101419"
+base1 = "#181e25"
+base2 = "#202831"
+base3 = "#28323e"
+base4 = "#303c4b"
+base5 = "#384657"
+
+fg0 = "#CFC9C9"
+fg1 = "#eceaea"
+fg2 = "#f5f4f4"
+
+white = "#cfc9c9" #done
+lwhite = "#fefcfb" #done
+
+orange = "#de6e4b"
+red = "#ad343e"
+
+dblue = "#2c5a63"
+blue = "#6db1bf" #done
+
+magenta = "#ac7db5"
+lmagenta = "#e56399" # done
+
+green = "#216869"
+lgreen = "#75bba7" # done
+
+yellow = "#f3de8a" # done
+lyellow = "#f4ffd6"
+
+lcyan = "#a2e8dd"
+cyan = "#59dcb7"
+
