@@ -4,3 +4,4 @@ auto-format = true
 
 [[language]]
 name = "python"
+roots = ["pyproject.toml", "pyproject.lock", "requirements.txt"]

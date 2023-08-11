@@ -9,6 +9,12 @@ export ANTIDOTE_HOME="$XDG_CACHE_HOME/antidote"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
+export ANSIBLE_HOME="$XDG_CONFIG_HOME/ansible"
+export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible.cfg"
+export ANSIBLE_GALAXY_CACHE_DIR="$XDG_CACHE_HOME/ansible/galaxy_cache"
+
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+
 export PATH="$CARGO_HOME/bin":$PATH
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$XDG_CONFIG_HOME/emacs/bin":$PATH
