@@ -1,0 +1,76 @@
+{
+  "name": "top-bar",
+  "position": "top",
+  "height": 30,
+  "popup_gap": 8,
+  "ironvar_defaults": {},
+  "start": [
+    {
+      "type": "workspaces",
+      "icon_size": 28,
+      "name_map": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4"
+      }
+    }
+  ],
+  "center": [
+    {
+      "type": "clock",
+      "format": "%d/%m/%Y %H:%M"
+    }
+  ],
+  "end": [
+    {
+      "bar": [
+        {
+          "name": "power-menu-launcher",
+          "type": "button",
+          "label": "",
+          "on_click": "popup:toggle"
+        }
+      ],
+      "type": "custom",
+      "class": "power-menu",
+      "popup": [
+        {
+          "type": "box",
+          "class": "power-popup",
+          "orientation": "vertical",
+          "widgets": [
+            {
+              "label": "Power menu",
+              "name": "header",
+              "type": "label"
+            },
+            {
+              "type": "button",
+              "class": "menu-btn",
+              "label": "Logout",
+              "on_click": ""
+            },
+            {
+              "type": "button",
+              "class": "menu-btn",
+              "label": "Shutdown",
+              "on_click": "!shutdown now"
+            },
+            {
+              "type": "button",
+              "class": "menu-btn",
+              "label": "Logout",
+              "on_click": "!reboot"
+            },
+            {
+              "label": "Uptime: {{30000:uptime -p | cut -d ' ' -f2-}}",
+              "name": "uptime",
+              "type": "label"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
