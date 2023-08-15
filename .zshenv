@@ -9,6 +9,11 @@ export ANTIDOTE_HOME="$XDG_CACHE_HOME/antidote"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+
+export KUBECONFIG="$XDG_CONFIG_HOME/kube"
+export K9SCONFIG="$XDG_CONFIG_HOME"/k9s
+
 export ANSIBLE_HOME="$XDG_CONFIG_HOME/ansible"
 export ANSIBLE_CONFIG="$XDG_CONFIG_HOME/ansible.cfg"
 export ANSIBLE_GALAXY_CACHE_DIR="$XDG_CACHE_HOME/ansible/galaxy_cache"

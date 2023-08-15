@@ -1,50 +1,64 @@
+@define-color fg0 #cfc9c9;
+@define-color fg1 #eceaea;
+@define-color fg2 #f5f4f4;
+
+@define-color base0 #101419;
+@define-color base1 #202831;
+@define-color base2 #384657;
+
+@define-color red #ad343e;
+@define-color orange #de6e4b;
+@define-color blue #6db1bf;
+@define-color darkblue #2c5a63;
+@define-color magenta #ac7db5;
+@define-color lightmagenta #e56399;
+@define-color green #216869;
+@define-color lgreen #75bba7;
+@define-color yellow #f3de8a;
+@define-color lyellow #f4ffd6;
+@define-color lcyan #a2e8dd;
+@define-color cyan #59dcb7;
+
 * {
-  font-family: "Caskaydia Cove Nerd Font";
-  font-size: 13px;  
+  font-size: 13px;
+  font-family: sans-serif;
   outline-style: none;
+  border: none;
+  background-color: transparent;
 }
 
 #window {
-  color: #b0b0bf;
-  background-color: #161c23;
-  border: 1px solid #313f4e;
-  border-radius: 4px; 
-}
-
-#outer-box {
-  background-color: transparent;
+  padding: 8px;
+  color: @base0;
+  background-color: #e7ebee;
+  border-radius: 4px;
 }
 
 #input {
-  color: #b0b0bf;
-  background-color: transparent;
-  border: none;  
-}
-
-#input:selected {
-  border: none;
-}
-
-#input:selected {
-  border: none;
+  border-radius: 0;
+  border-bottom: 1px dotted @base0;
 }
 
 #scroll {
   margin: 0px;
-  border-top: 1px dotted #313f4e;
+  background-image: none;
 }
 
-#inner-box {
-  border: none;
-  background-color: transparent;
+#entry {
+  padding: 4px 8px 4px 8px;
 }
 
 #entry:selected {
   border-left: 1px solid #313f4e;
   border-right: 1px solid #313f4e;
-  background-color: #161c23;  
+  background-color: @base1;
+}
+
+#entry:hover {
+  background-color: @magenta;
 }
 
 #text:selected {
-  color: #f4ac45;
+  color: @fg0;
+  font-weight: bold;
 }
