@@ -1,5 +1,5 @@
 window {
-  background-image: url("/home/db/.config/wallpaper/wp.png");
+  background-image: url("/usr/share/backgrounds/default.png");
   background-size: cover;
   background-position: center;
 }
@@ -26,7 +26,7 @@ window {
 #input-field {
   color: #cfc9c9;
   background-color: #384657;
-  border-color: transparent;
+  border: none;
 }
 
 #input-label {}

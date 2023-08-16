@@ -1,0 +1,29 @@
+[user]
+	name = Daniel Børseth
+	email = daniel@borseth.me
+	signingkey = 0xBF790327A9FE63B8
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+[pull]
+	rebase = true
+[alias]
+	a = add
+	c = commit
+	d = diff
+	s = status
+	tags = tag -l
+	branches = branch -a
+	
+[url "git@github.com:"]
+	pushInsteadOf = "https://github.com/"
+
+[include]
+	path = ./config.local
