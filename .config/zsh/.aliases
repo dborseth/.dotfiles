@@ -1,10 +1,15 @@
 #!/bin/zsh
 
 #https://www.anand-iyer.com/blog/2018/a-simpler-way-to-manage-your-dotfiles.html
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias df='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias ls='exa -lax --group-directories-first'
 # alias ls='ls -la --color=auto'
+
+alias gpg-switch-key='gpg-connect-agent "scd serialno" "learn --force" /bye'
+
+alias list-installed="pacman -Qq | fzf --preview 'pacman -Qil {}' --bind 'enter:execute(pacman -Qil {} | less)'"
+alias list-all="pacman -Slq | fzf --preview 'pacman -Si {}'"
 
 alias ..='cd ..'
 alias ...='cd ...'

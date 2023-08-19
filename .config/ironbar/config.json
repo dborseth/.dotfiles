@@ -24,6 +24,24 @@
   ],
   "end": [
     {
+      "type": "script",
+      "cmd": "~/.local/bin/network.sh",
+      "mode": "poll",
+      "interval": 5000
+    },
+    {
+      "type": "script",
+      "cmd": "~/.local/bin/volume.sh",
+      "mode": "poll",
+      "interval": 5000
+    },
+    {
+      "type": "script",
+      "cmd": "~/.local/bin/battery.sh",
+      "mode": "poll",
+      "interval": 5000
+    },
+    {
       "bar": [
         {
           "name": "power-menu-launcher",

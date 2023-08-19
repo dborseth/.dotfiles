@@ -1,0 +1,47 @@
+$fg0: #cfc9c9;
+$fg1: #eceaea;
+$fg2: #f5f4f4;
+
+$base0: #101419;
+$base1: #161c23;
+$base2: #384657;
+
+$red: #ad343e;
+$orange: #de6e4b;
+$blue: #6db1bf;
+$darkblue: #2c5a63;
+$magenta: #ac7db5;
+$lmagenta: #e56399;
+$green: #216869;
+$lgreen: #75bba7;
+$yellow: #f3de8a;
+$lyellow: #f4ffd6;
+$lcyan: #a2e8dd;
+$cyan: #59dcb7;
+
+
+* {
+  all: unset;
+  font-family: sans-serif;
+}
+
+.bar {
+  color: $fg0;
+  background-color: $base0;
+  box-shadow: 4px 8px 8px black;
+}
+
+.module {
+  margin: 0;
+}
+
+.volume-icon {
+  color: yellow;
+  font-size: 22px;
+  margin: 0 10px 0 10px;
+}
+
+.volume-slider through highlight {
+  background-image: linear-gradient(to right, #afcee0 30%, #a1bdce 50%, #77a5bf 100% *50);
+  border-radius: 10px;
+}
