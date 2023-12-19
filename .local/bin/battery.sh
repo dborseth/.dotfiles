@@ -5,7 +5,7 @@ battery="/org/freedesktop/UPower/devices/battery_BAT0"
 charging=$(upower -i $power | awk '/online/ {print $2}')
 pst="$(upower -i $battery | awk '/percentage/ {print substr($2, 1, length($2) - 1)}')"
 
-if [ $charging == "yes" ]; then
+if [[ $charging == "yes" ]]; then
   echo "<span>󰂄</span>"
 elif (( $pst > 90 )); then
   echo "<span>󰁹</span>"

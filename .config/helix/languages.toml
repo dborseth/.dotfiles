@@ -3,5 +3,29 @@ name = "rust"
 auto-format = true
 
 [[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["clangd"]
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
+language-servers = ["clangd"]
+
+
+[[language]]
 name = "python"
+auto-format = true
+# language-server = {  }
 roots = ["pyproject.toml", "pyproject.lock", "requirements.txt"]
+
+[[language]]
+name = "yaml"
+file-types = ["yaml", "yml"]
+language-servers = ["yaml-language-server"]
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+[language-server.clangd]
+command = "clangd"
+args = ["--background-index", "--clang-tidy"]

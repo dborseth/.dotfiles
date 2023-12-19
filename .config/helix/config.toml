@@ -1,24 +1,35 @@
 theme = "arbitrary"
 
+
 [editor]
+scrolloff = 5
+scroll-lines = 3
 true-color = true
-mouse = true
-line-number = "absolute"
+undercurl = true
 cursorline = true
-auto-save = true
 rulers = [80]
 color-modes = true
+auto-save = true
+completion-replace = true
+idle-timeout = 200
+#bufferline = "always"
 
 [editor.statusline]
-left = ["mode", "spinner", "file-name", "file-modification-indicator"]
+left = ["mode", "spinner", "version-control", "spacer", "file-name", "file-modification-indicator"]
 center = []
-right = ["diagnostics", "selections", "position-percentage", "file-encoding", "file-type"]
+right = ["diagnostics", "spacer", "spacer", "selections", "position", "position-percentage", "file-encoding", "spacer", "spacer", "file-type"]
+separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
 
 [editor.lsp]
 display-messages = true
+display-inlay-hints = false
+auto-signature-help = false
+display-signature-help-docs = false
+snippets = true
+goto-reference-include-declaration = true
 
 [editor.cursor-shape]
 insert = "bar"
@@ -30,12 +41,22 @@ hidden = false
 
 [editor.indent-guides]
 render = true
+skip-levels = 1
 
 [editor.soft-wrap]
 enable = true
 
 [keys.normal]
 "#" = "toggle_comments"
-"C-c" = "no_op"
+"j" = "move_char_left"
+#"i" = "move_char_up"
+#"k" = "move_char_down"
+"l" = "move_char_right"
+"C-s" = ["save_selection", ":w"]
+"C-q" = [":q"]
+"ret" = ["open_below", "normal_mode"]
 "C-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "C-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
+[keys.normal.space]
+# "r" = [":w", ":config-reload"]
