@@ -1,0 +1,74 @@
+on_force_close "detach"
+simplified_ui true
+default_shell "fish"
+pane_frames false
+default_layout "default"
+default_mode "locked"
+copy_command "wl-copy"
+
+theme "default"
+themes {
+    default {
+        fg "#dad6d6"
+        bg "#161c23" 
+        red "#ffffff" // nothing?
+        green "#161c23"
+        yellow "#ffffff" // nothing?
+        blue "#ffffff" // nothing
+        magenta "#dcb659"
+        orange "#dad6d6"
+        cyan "#df99f0"
+        black "#161c23"
+        white "#b92753"
+    }
+}
+
+ui {
+    pane_frames {
+        rounded_corners false
+        hide_session_name false
+    }
+}
+
+plugins {
+    tab-bar { path "tab-bar"; }
+    status-bar { path "status-bar"; }
+    strider { path "strider"; }
+    compact-bar { path "compact-bar"; }
+    session-manager { path "session-manager"; }
+}
+
+keybinds clear-defaults=true {
+    locked {
+        bind "Ctrl a" { SwitchToMode "normal"; }
+    }
+    normal {
+        bind "q" { Quit; }
+        bind "d" { Detach; }
+        bind "w" { CloseTab; SwitchToMode "locked"; }
+        bind "f" { ToggleFloatingPanes; SwitchToMode "locked"; }
+        bind "n" { NewPane; SwitchToMode "locked"; }
+        bind "1" { GoToTab 1; SwitchToMode "locked"; }
+        bind "2" { GoToTab 2; SwitchToMode "locked"; }
+        bind "3" { GoToTab 3; SwitchToMode "locked"; }
+        bind "4" { GoToTab 4; SwitchToMode "locked"; }
+        bind "5" { GoToTab 5; SwitchToMode "locked"; }
+        bind "6" { GoToTab 6; SwitchToMode "locked"; }
+        bind "7" { GoToTab 7; SwitchToMode "locked"; }
+        bind "8" { GoToTab 8; SwitchToMode "locked"; }
+        bind "9" { GoToTab 9; SwitchToMode "locked"; }
+        bind "l" { NextSwapLayout; SwitchToMode "locked"; }
+        bind "Left" { MoveFocus "Left"; SwitchToMode "locked"; }
+        bind "Right" { MoveFocus "Right"; SwitchToMode "locked"; }
+        bind "Down" { MoveFocus "Down"; SwitchToMode "locked"; }
+        bind "Up" { MoveFocus "Up"; SwitchToMode "locked"; }
+        bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; SwitchToMode "Normal"; }
+        bind "s" {
+            LaunchOrFocusPlugin "zellij:session-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "locked"
+        }
+    }
+}
