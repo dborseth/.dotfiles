@@ -1,3 +1,6 @@
+[language-server]
+clangd = { command = "clangd", args = ["--background-index", "--clang-tidy"] }
+
 [[language]]
 name = "rust"
 auto-format = true
@@ -12,20 +15,63 @@ name = "cpp"
 indent = { tab-width = 4, unit = "    " }
 language-servers = ["clangd"]
 
-
 [[language]]
 name = "python"
 auto-format = true
-# language-server = {  }
 roots = ["pyproject.toml", "pyproject.lock", "requirements.txt"]
 
 [[language]]
+name = "java"
+roots = ["build.xml", "pom.xml", "build.gradle"]
+
+[language-server.jdtls]
+command = "jdtls"
+args = ["-configuration ~/.cache/jdtls", "-data ~/.cache/jdtls/workspace"]
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = ["typescript-language-server", "eslint"]
+formatter = { command = "dprint", args=["fmt","--stdin","typescript"] }
+
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = ["typescript-language-server", "eslint"]
+formatter = { command = "dprint", args=["fmt","--stdin","tsx"] }
+
+[[language]]
+name = "javascript"
+auto-format = true
+language-servers = ["typescript-language-server", "eslint"]
+formatter = { command = "dprint", args=["fmt","--stdin","javascript"] }
+
+[[language]]
+name = "jsx"
+auto-format = true
+language-servers = ["typescript-language-server", "eslint"]
+formatter = { command = "dprint", args=["fmt","--stdin","jsx"] }
+
+[[language]]
+name = "json"
+auto-format = true
+formatter = { command="dprint", args=["fmt","--stdin","json"]}
+
+[[language]]
+name = "html"
+auto-format = true
+language-servers = ["vscode-html-language-server"]
+formatter = { command="prettier", args=["--parser", "html"]}
+
+[[language]]
+name = "css"
+auto-format = true
+language-servers = ["vscode-css-language-server"]
+formatter = { command="prettier", args=["--parser", "css"]}
+
+[[language]]
 name = "yaml"
+auto-format = true
 file-types = ["yaml", "yml"]
 language-servers = ["yaml-language-server"]
-auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
-
-[language-server.clangd]
-command = "clangd"
-args = ["--background-index", "--clang-tidy"]

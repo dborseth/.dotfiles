@@ -1,0 +1,29 @@
+[general]
+confirm_quit.enabled = false
+
+[style]
+section_header.fg = "#dcb659"
+file_header.fg = "#df99f0"
+hunk_header.fg = "#1e758d"
+
+line_added.fg = "#136f63"
+line_removed.fg = "#b92753"
+line_highlight.changed.mods = "BOLD"
+line_highlight.unchanged.mods = "DIM"
+
+cursor.fg = "#1e758d"
+selection_bar.fg = "#1e758d"
+selection_bar.mods = "DIM"
+selection_line.mods = "BOLD"
+# You may want to set `selection_area.bg` to a nice background color.
+# Looks horrible with regular terminal colors, so is therefore not set.
+selection_area.bg = "reset"
+
+hash.fg = "#fff3b0"
+branch.fg = "#21c0ab"
+remote.fg = "#db577e"
+tag.fg = "#fff3b0"
+
+command.fg = "#1e758d"
+command.mods = "BOLD"
+hotkey.fg = "#df99f0"

@@ -1,10 +1,14 @@
-on_force_close "detach"
+on_force_close "quit"
 simplified_ui true
 default_shell "fish"
 pane_frames false
 default_layout "default"
 default_mode "locked"
 copy_command "wl-copy"
+copy_on_select true
+
+session_serialization true
+pane_viewport_serialization false
 
 theme "default"
 themes {
@@ -34,7 +38,6 @@ plugins {
     tab-bar { path "tab-bar"; }
     status-bar { path "status-bar"; }
     strider { path "strider"; }
-    compact-bar { path "compact-bar"; }
     session-manager { path "session-manager"; }
 }
 

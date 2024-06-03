@@ -1,6 +1,5 @@
 theme = "arbitrary"
 
-
 [editor]
 scrolloff = 5
 scroll-lines = 3
