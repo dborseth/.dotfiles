@@ -1,0 +1,48 @@
+#!/usr/bin/env fish
+
+function has_session
+    tmux has-session -t "$argv[1]" 2>/dev/null
+end
+
+function is_running
+    tmux list-clients > /dev/null 2>&1
+end
+
+function open_session 
+    set new $argv[1]
+
+    if not set -q TMUX
+        tmux new-session -As "$new"
+        return
+    end
+
+    set active (tmux display-message -p "#S")
+        
+    if not has_session "$new"
+        tmux new-session -d -s "$new"
+    end
+                
+    if test "$active" != "$new"
+       tmux switch-client -t "$new"
+    end
+end
+
+function run_cmd
+    if test $argv[1] = "v"
+        tmux split-window -v "$argv[2]"
+    else if test $argv[1] = "h"
+        tmux split-window -h "$argv[2]"
+    end
+end
+
+set -l cmd "$argv[1]"
+
+switch $argv[1]
+    case "s" "session"
+        open_session "$argv[2]"
+    case "r" "run"
+        run_cmd "$argv[2]" "$argv[3]"
+    case "*"
+        open_session "default"
+end
+

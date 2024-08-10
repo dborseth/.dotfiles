@@ -1,4 +1,5 @@
 source_env ~/.config/environment.d/env.conf
+source ~/.local/bin/set_colors
 
 set -x PATH $PATH $HOME/.local/bin $CARGO_HOME/bin $GOPATH/bin
 
