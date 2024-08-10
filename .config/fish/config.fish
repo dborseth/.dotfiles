@@ -12,7 +12,7 @@ gpgconf --launch gpg-agent
 
 set -g fish_greeting
 
-alias ls "eza -lax --group-directories-first"
+alias ls "eza -lab --sort=type --time-style='+%d/%m/%d'"
 alias gpg-switch-key "gpg-connect-agent 'scd serialno' 'learn --force' /bye"
 
 set --local FISH_CONFIG_ROOT (dirname (status --current-filename))

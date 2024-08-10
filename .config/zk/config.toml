@@ -1,0 +1,30 @@
+[notebook]
+dir = "~/documents/notes"
+
+[tool]
+editor = "hx"
+shell = "/bin/fish"
+pager = "less -FIRX"
+fzf-preview = ""
+fzf-line = '{{style "bright-white" rel-path}} ({{format-date modified "elapsed"}}){{#each tags}} {{style "faint" "#"}}{{style "bright-magenta" this}}{{/each}} {{style "faint black" body}}'
+fzf-options = "--layout=reverse --tabstop 4 --tiebreak=begin --exact --no-hscroll --highlight-line --color hl:-1,hl+:-1 --bind 'enter:execute(tx run v \"hx {2}\")+abort'"
+
+[alias]
+ls = "zk list --format oneline"
+create = 'zk edit --interactive'
+last = "zk edit --limit 1 --sort modified $argv"
+recent = "zk list --sort created --limit 10 --format oneline"
+daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/journal"'
+paths = "zk list --quiet --format \"'{{path}}'\" --delimiter ' ' $argv"
+inline = "zk list --quiet --format {{path}} --delimiter , $argv"
+
+[lsp]
+
+[lsp.diagnostics]
+wiki-title = "hint"
+dead-link = "error"
+
+[lsp.completion]
+note-label = "{{title-or-path}}"
+note-filter-text = "{{title}} {{path}}"
+note-detail = "{{filename-stem}}"

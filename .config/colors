@@ -1,0 +1,21 @@
+cursor =     #b3bac2
+background = #101419 x
+foreground = #c2c7ce x
+
+color0 =     #303842 ;black x
+color1 =     #5a445c ;red
+color2 =     #8cc5be ;green x
+color3 =     #ca8f68 ;yellow
+color4 =     #3d5370 ;blue
+color5 =     #d1d5db ;magenta
+color6 =     #7c858f ;cyan (gray) x
+color7 =     #adb4be ;gray?
+
+color8 =     #5c6979 ;bright-black okhsl(254, 16%, 44%)
+color9 =     #e3a6b1 ;bright-red x
+color10 =    #98c2c0 ;bright-green okhsl(144 ..)
+color11 =    #c2bb7b ;bright-yellow x
+color12 =    #9bbece ;bright-blue x 
+color13 =    #d2adb7 ;bright-magenta okhsl(321, 50%, 85%)
+color14 =    #8cc5be ;bright-cyan x
+color15 =    #dee3e9 ;white

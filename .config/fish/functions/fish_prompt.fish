@@ -21,7 +21,7 @@ function fish_prompt
         echo -sn "$USER@$(prompt_hostname) "
     end 
 
-    set_color brblue
+    set_color blue
     echo -sn "$(prompt_pwd)" 
     set_color normal
     echo -sn "$(fish_git_prompt)"

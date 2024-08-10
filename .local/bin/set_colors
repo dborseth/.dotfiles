@@ -1,0 +1,48 @@
+#!/usr/bin/env fish
+
+set -l palette "$XDG_CONFIG_HOME/colors"
+
+if not test -f $palette
+	echo "Could not find palette: $palette"
+	exit 1
+end
+
+set -l foreground_esc "\033]10;%s\007"
+set -l background_esc "\033]11;%s\007"
+set -l cursor_esc "\033]12;%s\007"
+set -l color_esc "\033]4;%d;%s\007"
+
+function print_esc
+	if set -q TMUX
+		printf "\033Ptmux;\033%s\033\\" $argv
+	else
+		printf $argv
+	end
+end
+
+while read -l line
+	set line (echo $line | string replace -r ";.*" "")
+
+	if test -z "$line"
+		continue	
+	end
+
+	set parts (echo $line | string split "=")
+
+	set key (echo $parts[1] | string trim)
+	set value (echo $parts[2] | string trim)
+
+	# echo "Key: $key, Value: $value"
+
+	switch $key
+		case "cursor"
+			print_esc (printf $cursor_esc $value)
+		case "background"
+			print_esc (printf $background_esc $value)
+		case "foreground"
+			print_esc (printf $foreground_esc $value)
+		case "color*"
+			set idx (echo $key | string replace -r "color" "")
+			print_esc (printf $color_esc $idx $value)
+	end
+end < $palette

@@ -1,4 +1,4 @@
-theme = "arbitrary"
+theme = "arbitrary2"
 
 [editor]
 scrolloff = 5
@@ -12,6 +12,7 @@ auto-save = true
 completion-replace = true
 idle-timeout = 200
 #bufferline = "always"
+popup-border = "all"
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "spacer", "file-name", "file-modification-indicator"]
@@ -52,10 +53,10 @@ enable = true
 #"k" = "move_char_down"
 "l" = "move_char_right"
 "C-s" = ["save_selection", ":w"]
+
 "C-q" = [":q"]
-"ret" = ["open_below", "normal_mode"]
 "C-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "C-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"ret" = ["open_below", "normal_mode"]
 
 [keys.normal.space]
-# "r" = [":w", ":config-reload"]

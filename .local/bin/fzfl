@@ -1,0 +1,51 @@
+#!/usr/bin/env fish
+
+set -l dirs \
+    /usr/share/applications \
+    /usr/local/share/applications \
+    $HOME/.local/share/applications
+
+set -l keys
+set -l values
+   
+for dir in $dirs
+    if test ! -d $dir
+        continue
+    end
+            
+    for file in $dir/*.desktop
+        set -l no_display (string match -r "^NoDisplay=true" < $file)
+        set -l hidden (string match -r "^Hidden=true" < $file)
+        set -l terminal (string match -r "^Terminal=true" < $file)
+        set -l app (string match -r "^Type=Application" < $file)
+
+        if test "$no_display"; 
+            or test "$hidden"; 
+            or test "$terminal";
+            or not test -n "$app"
+            continue
+        end
+
+        set -l name (\
+            string match -r "^Name=.*" < $file | 
+            string replace "Name=" "" |
+            head -n 1)
+
+        # echo "$name - $(path basename $file)"
+        
+        if test -n "$name"
+            set -a keys $name
+            set -a values (path basename $file)
+        end 
+    end
+end
+
+set -l selected ( \
+    printf "%s\n" $keys | 
+    fzf --reverse \
+)
+
+if set -l i (contains -i -- $selected $keys)
+   # echo "$selected - $values[$i]"
+   setsid /usr/bin/gtk-launch "$values[$i]" </dev/null &>/dev/null
+end

@@ -1,0 +1,14 @@
+--color='fg:#eceaea'
+--color='bg+:#161c23'
+--color='hl:#dcb659,hl+:#232d38'
+--color='info:#fff3b0,marker:#a2e8dd'
+--color='prompt:#db577e,spinner:#af5fff,pointer:#dcb659,header:#dad6d6'
+--color='gutter:#101419,border:#eceaea,preview-border:#232d38'
+--color='label:#aeaeae,query:#d9d9d9'
+
+--color='separator:#232d38'
+--prompt="$ " 
+--marker="•"
+--pointer="→"
+--info=inline-right
+--scrollbar=""

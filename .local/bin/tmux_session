@@ -6,6 +6,8 @@ session_exists() {
   tmux has_session -t "$1" 2>/dev/null
 }
 
+echo "TMUX=$TMUX"
+
 if [[ -n "$TMUX" ]]; then
   if session_exists "$session_name"; then
     tmux switch-client -t "$session_name"

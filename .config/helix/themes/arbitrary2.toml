@@ -1,0 +1,120 @@
+"attribute" = { fg = "default" }
+"type" = { fg = "default", modifiers = [] }
+# "type.builtin" = { fg = "light-red" }
+# "type.enum" = { fg = "default"}
+"constructor" = { fg = "default", modifiers = [] }
+"constant" = { fg = "light-red" }
+# "constant.builtin" = {}
+# "constant.builtin.boolean" = {}
+# "constant.character" = {}
+# "constant.numeric" = {}
+"string" = { fg = "green", modifiers = []  }
+# "string.regexp" = {}
+"string.special" = { fg = "light-red" }
+# "string.special.path" = { fg = "yellow" }
+# "string.special.url" = {}
+# "string.special.symbol" = { fg = "default" }
+"comment" = { fg = "gray", modifiers = ["italic"] }
+"variable" = { fg = "default", modifiers = [] }
+# "variable.builtin" = { fg = "" }
+# "variable.parameter" = {}
+# "variable.other" = { fg = "light-blue" }
+"label" = "default"
+"punctuation" = { fg = "default", modifiers = ["dim"] }
+# "punctuation.delimiter" = { fg = "gray" }
+"punctuation.bracket" = { fg = "default" }
+# "punctuation.special" = "gray"
+"keyword" = { fg = "light-blue" }
+"keyword.control" = { fg = "light-blue", modifiers = [] }
+# "keyword.operator" = { fg = "yellow" }
+# "keyword.directive" = { fg = "yellow" }
+"keyword.function" = { fg = "light-yellow", modifiers = [] }
+"keyword.storage" = { fg = "light-blue", modifiers = [] }
+# "keyword.storage.type" = { fg = "light-yellow", modifiers = ["bold"] }
+"operator" = { fg = "default" }
+"function" = { fg = "white", modifiers = [] }
+# "function.builtin" = {}
+# "function.method" = {}
+# "function.macro" = {}
+# "function.special" = {}
+"tag" = { fg = "white", modifiers = ["bold"] }
+"namespace" = { fg = "cyan", modifiers = [] }
+"special" = "deault" # This hits on derive,? in rust
+"markup.heading" = { fg = "default", modifiers = []}
+# "markup.heading.marker" = { fg = "yellow", modifiers = []}
+"markup.list" = "yellow"
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
+# "markup.link.label" = { fg = "blue"}
+# "markup.link.text" = { fg = "blue" }
+"markup.quote" = "cyan"
+"markup.raw" = "bright-green"
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "yellow"
+
+# "markup.normal.completion" = { bg = "cyan", fg = "gray" }
+# "markup.normal.hover" = {}
+# "markup.heading.completion" = {}
+# "markup.heading.hover" = {}
+# "markup.raw.inline.completion" = {}
+# "markup.raw.inline.hover" = {}
+
+"ui.background" = { bg = "bg", fg = "default" }
+"ui.background.separator" = { fg = "gray" }
+"ui.cursor" = { fg = "bg", bg = "white" }
+"ui.cursor.match" = { fg = "bg", bg = "white" }
+"ui.debug.breakpoint" = "magenta"
+"ui.debug.active" = "magenta"
+"ui.gutter" = { bg = "bg" }
+"ui.gutter.selected" = { bg = "black" }
+"ui.highlight.frameline" = { fg = "magenta" }
+"ui.linenr" = { fg = "black", modifiers = [] } # fix me
+"ui.linenr.selected" = { fg = "default", modifiers = ["bold"] }
+"ui.statusline" = { fg = "default", bg = "black" }
+"ui.statusline.inactive" = { modifiers = ["dim"] }
+"ui.statusline.normal" = { bg = "green", modifiers = [] } #green is too light
+"ui.statusline.insert" = { bg = "red", fg = "bg", modifiers = ["dim"] } # red is too light
+"ui.statusline.select" = { bg = "yellow", fg = "bg", modifiers = [] }
+# "ui.bufferline" = {}
+# "ui.bufferline.active" = {}
+# "ui.bufferline.background" = {}
+# "ui.popup" = {}
+# "ui.popup.info" = {}
+"ui.window" = { fg = "gray" } # Line between splits
+"ui.help" = { bg="bg", fg="default" }
+"ui.text" = { fg="default" }
+"ui.text.focus" = { bg = "gray", fg = "magenta" }
+"ui.text.inactive" = { modifiers = [] }
+"ui.text.info" = { fg = "default" }
+"ui.virtual.ruler" = { bg = "black" }
+"ui.virtual.whitespace" = { fg = "default", modifiers = []}
+"ui.virtual.indent-guide" = "black"
+"ui.virtual.inlay-hint" = { bg = "black", fg = "default", modifiers = []}
+# "ui.virtual.inlay-hint.parameter" = {}
+# "ui.virtual.inlay-hint.type" = {}
+"ui.virtual.wrap" = { fg = "default", modifiers = []}
+# "ui.virtual.jump-label" = {}
+"ui.menu" = { fg = "default", bg = "black" }
+"ui.menu.selected" = { fg = "yellow", modifiers = [] }
+"ui.menu.scroll" = { fg = "default", bg = "bg" }
+"ui.selection" = { fg = "default", bg = "gray" }
+# "ui.selection.primary" = {}
+"ui.highlight" = { fg = "magenta"}
+"ui.cursorline" = { bg = "black" }
+
+warning = "yellow"
+error = "red"
+info = "blue"
+hint = "green"
+
+"diagnostic.hint" = { underline = { color = "green", style = "dotted"} }
+"diagnostic.info" = { underline = { color = "blue", style = "dotted"} }
+"diagnostic.warning" = { underline = { color = "yellow", style = "curl"} }
+"diagnostic.error" = { underline = { color = "red", style = "curl"} }
+
+[palette]
+bg = "#101419"
