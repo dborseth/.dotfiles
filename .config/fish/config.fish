@@ -1,6 +1,6 @@
 source_env ~/.config/environment.d/env.conf
 
-set -x PATH $PATH $CARGO_HOME/bin $GOPATH/bin
+set -x PATH $PATH $HOME/.local/bin $CARGO_HOME/bin $GOPATH/bin
 
 set -e SSH_AGENT_PID
 if test "$gnupg_SSH_AUTH_SOCK_by" != $fish_pid
