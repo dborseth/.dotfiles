@@ -2,36 +2,36 @@
 set git_cmd git -C $ZK_NOTEBOOK_DIR
 
 function handle_git_error
-	echo "Error running git command."
-	return
+    echo "Error running git command."
+    return
 end
 
 if test (count $argv) -eq 0
-	zk edit --sort modified --interactive
-	return
+    zk edit --sort modified --interactive
+    return
 end
 
 switch $argv[1]
-	case "status" "add" "commit" "push" "pull" "log" "diff"
-		$git_cmd $argv
-		return
-	case "sync"
-		$git_cmd add .
-		        
-		if ! $git_cmd diff --cached --quiet
-			$git_cmd commit -m "tmp"
-			$git_cmd pull --rebase
-			
-			set summary ($git_cmd diff --cached --shortstat HEAD~1)
-			$git_cmd commit --amend -m "Synced changes: $summary."
-		else
-			$git_cmd pull --rebase
-			echo "No changes to commit."
-			return
-		end
-		
-		$git_cmd push
-		return
+    case status add commit push pull log diff
+        $git_cmd $argv
+        return
+    case sync
+        $git_cmd add .
+
+        if ! $git_cmd diff --cached --quiet
+            $git_cmd commit -m tmp
+            $git_cmd pull --rebase
+
+            set summary ($git_cmd diff --cached --shortstat HEAD~1)
+            $git_cmd commit --amend -m "Synced changes: $summary."
+        else
+            $git_cmd pull --rebase
+            echo "No changes to commit."
+            return
+        end
+
+        $git_cmd push
+        return
 end
 
 zk $argv
