@@ -1,0 +1,25 @@
+#!/usr/bin/env fish
+
+set SESSION "calc"
+set TITLE "foot-$SESSION"
+set WINDOW (hyprctl clients | grep -B 5 "$TITLE" | grep "address" | awk '{print $2}')
+
+if test "$WINDOW"
+    hyprctl dispatch closewindow "$WINDOW"
+    exit 0
+end
+
+if tmux has-session -t $SESSION 2>/dev/null
+    set ATTACHED (tmux list-sessions | grep "$SESSION" | grep "(attached)")
+
+    if test -z "$ATTACHED"
+        tmux attach-session -t $SESSION
+    else
+        tmux detach-client -s $SESSION
+    end
+else
+    tmux new-session -d -s $SESSION kalker; and \
+    tmux set-option -t $SESSION status off
+
+    tmux attach-session -t $SESSION
+end

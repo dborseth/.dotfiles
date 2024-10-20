@@ -101,9 +101,7 @@ auto-format = true
 
 [[language]]
 name = "yaml"
-file-types = ["yaml", "yml"]
-language-servers = ["yaml-language-server"]
-indent = { tab-width = 2, unit = "  " }
+language-servers = ["yaml-language-server", "ansible-language-server"]
 formatter = { command = "npx", args = ["prettier", "--parser", "yaml"] }
 auto-format = true
 
@@ -113,3 +111,14 @@ language-servers = ["marksman", "zk"]
 formatter = { command = "npx", args = ["prettier", "--parser", "markdown"] }
 soft-wrap.enable = true
 soft-wrap.wrap-at-text-width = true
+
+[language-server.lexical]
+command = "/home/db/pkgbuilds/lexical/_build/dev/package/lexical/bin/start_lexical.sh"
+
+[[language]]
+name = "elixir"
+language-servers = ["lexical"]
+
+[[language]]
+name = "heex"
+language-servers = ["lexical"]
